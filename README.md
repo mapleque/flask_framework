@@ -1,4 +1,5 @@
 # flask项目实践
+这是一个基于flask框架实现的简单项目架构，仅利用flask的路由管理，配置管理，数据库连接管理。
 ## 当前项目部署方法
 ```
 # install python pip virtualenv
