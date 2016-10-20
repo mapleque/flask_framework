@@ -1,0 +1,2 @@
+SQLALCHEMY_DATABASE_URI = 'mysql+mysqldb://user:pass@127.0.0.1:3306/dbname?charset=utf8'
+SQLALCHEMY_TRACK_MODIFICATIONS = True
