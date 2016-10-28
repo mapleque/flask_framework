@@ -1,8 +1,40 @@
 [uwsgi]
+
+;create the pid file which can be used as stop or reload
+;for example:
+;uwsgi --stop /var/run/uwsgi.pid
+;uwsgi --reload /var/run/uwsgi.pid
+pidfile = /var/run/uwsgi.pid
+
+;the project path
+;there usually has a python file as entrence
+chdir = <project_path>
+
+;service socket
 socket = 127.0.0.1:5000
+
+;stats socket
+;pip install uwsgitop
+;and use 'uwsgitop :5050' to inspect
+stats = 127.0.0.1:5050
+
+;workers number
 processes = 1
+
+;threads number
 threads = 2
+
+;entrence file name
 module = manager
+
+;app name
 callable = app
 
+;uwsgi log file
+daemonize = /var/log/uwsgi.log
+
+;rotate logs size <byte>
+max-logsize = 1000000000
+
+;on dev model open
 py-autoreload = 1
